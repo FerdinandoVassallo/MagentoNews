@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <munu>
+        <cms>
+            <children>
+                <vassallo_news>
+                    <title>News</title>
+                    <sort_order>90</sort_order>
+                    <children>
+                        <vassallo_news_category>
+                            <title>Categories</title>
+                            <sort_order>10</sort_order>
+                            <action>vassallo_news/admin_category</action>
+                        </vassallo_news_category>
+                        <vassallo_news_story>
+                            <title>Stories</title>
+                            <sort_order>10</sort_order>
+                            <action>vassallo_news/admin_story</action>
+                        </vassallo_news_story>
+                    </children>
+                </vassallo_news>
+            </children>
+        </cms>
+    </munu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <vassallo_news translate="title">
+                                <title>Vassallo_News</title>
+                                <sort_order>100</sort_order>
+                            </vassallo_news>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+    <modules>
+        <Vassallo_News>
+            <version>0.2.0</version>
+        </Vassallo_News>
+    </modules>
+    <global>
+        <block>
+            <vassallo_news>
+                <class>Vassallo_News_Block</class>
+            </vassallo_news>
+        </block>
+        <helper>
+            <vassallo_news>
+                <class>Vassallo_News_Helper</class>
+            </vassallo_news>
+        </helper>
+        <models>
+            <vassallo_news>
+                <class>Vassallo_News_Model</class>
+                <resourceModel>vassallo_news_resource</resourceModel>
+            </vassallo_news>
+            <vassallo_news_resource>
+                <class>Vassallo_News_Model_Resource</class>
+                <entities>
+                    <category>
+                        <table>vassallo_news_category</table>
+                    </category>
+                    <story>
+                        <table>vassallo_news_story</table>
+                    </story>
+                </entities>
+            </vassallo_news_resource>
+        </models>
+        <resources>
+            <vassallo_news_setup>
+                <setup>
+                    <module>Vassallo_News</module>
+                </setup>
+            </vassallo_news_setup>
+        </resources>
+    </global>
+    <frontend>
+
+    </frontend>
+        <translate>
+            <modules>
+                <vassallo_news>
+                    <files>
+                        <dafault>Vassallo_News.csv</dafault>
+                    </files>
+                </vassallo_news>
+            </modules>
+        </translate>
+    <admin>
+    </admin>
+        <routers>
+            <vassallo_news>
+                <use>admin</use>
+                <args>
+                    <module>Vassallo_News</module>
+                    <frontName>vassallo_news</frontName>
+                </args>
+            </vassallo_news>
+        </routers>
+    <adminhtml>
+
+    </adminhtml>
+    <default>
+
+    </default>
+</config>
+
