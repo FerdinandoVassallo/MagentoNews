@@ -6,16 +6,16 @@
         </Vassallo_News>
     </modules>
     <global>
-        <block>
+        <blocks>
             <vassallo_news>
                 <class>Vassallo_News_Block</class>
             </vassallo_news>
-        </block>
-        <helper>
+        </blocks>
+        <helpers>
             <vassallo_news>
                 <class>Vassallo_News_Helper</class>
             </vassallo_news>
-        </helper>
+        </helpers>
         <models>
             <vassallo_news>
                 <class>Vassallo_News_Model</class>
@@ -42,8 +42,6 @@
         </resources>
     </global>
     <frontend>
-
-    </frontend>
         <translate>
             <modules>
                 <vassallo_news>
@@ -53,8 +51,17 @@
                 </vassallo_news>
             </modules>
         </translate>
+        <routers>
+            <vassallo_news>
+                <use>standard</use>
+                <args>
+                    <module>Vassallo_News</module>
+                    <frontName>stories</frontName>
+                </args>
+            </vassallo_news>
+        </routers>
+    </frontend>
     <admin>
-    </admin>
         <routers>
             <vassallo_news>
                 <use>admin</use>
@@ -64,11 +71,26 @@
                 </args>
             </vassallo_news>
         </routers>
+    </admin>
     <adminhtml>
-
+        <translate>
+            <modules>
+                <vassallo_news>
+                    <files>
+                        <dafault>Vassallo_News.csv</dafault>
+                    </files>
+                </vassallo_news>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <vassallo_news>
+                    <file>vassallo_news.xml</file>
+                </vassallo_news>
+            </updates>
+        </layout>
     </adminhtml>
     <default>
 
     </default>
 </config>
-

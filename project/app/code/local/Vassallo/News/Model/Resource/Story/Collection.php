@@ -13,7 +13,7 @@
  * @version 0.2.0
  * @package Cms
  */
-class Vassallo_News_Model_Story_Collection extends Mage_Core_Model_Resource_Db_Collection_Abstract
+class Vassallo_News_Model_Resource_Story_Collection extends Mage_Core_Model_Resource_Db_Collection_Abstract
 {
     /**
      *

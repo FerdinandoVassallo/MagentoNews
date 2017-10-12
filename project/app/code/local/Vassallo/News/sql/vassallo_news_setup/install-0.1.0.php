@@ -17,11 +17,12 @@ $installer= $this;
 $installer->startSetup();
 
 $tableCategory= $installer->getConnection()->newTable($installer->getTable('vassallo_news/category'));
+
 $tableCategory->addColumn(
     'category_id',
     Varien_Db_Ddl_Table::TYPE_INTEGER,
     null,
-    array('primary' => true, 'identity' => true, 'nullable' => false,),
+    array('primary' => true, 'identity' => true, 'nullable' => false),
     'Category ID'
 )->addColumn(
     'code',
@@ -38,7 +39,7 @@ $tableCategory->addColumn(
 )->addColumn(
     'status',
     Varien_Db_Ddl_Table::TYPE_BOOLEAN,
-    64,
+    null,
     array('nullable' => false),
     'Category Status'
 )->addColumn(
@@ -52,7 +53,7 @@ $tableCategory->addColumn(
     Varien_Db_Ddl_Table::TYPE_TIMESTAMP,
     null,
     array('default' => Varien_Db_Ddl_Table::TIMESTAMP_INIT_UPDATE),
-    'Category created Ad'
+    'Category created At'
 );
 
 

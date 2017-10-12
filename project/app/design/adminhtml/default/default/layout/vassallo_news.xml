@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<layout>
+    <vassallo_news_adminhtml_category_index>
+        <reference name="content">
+            <block type="vassallo_news/adminhtml_category" name="vassallo_news.adminhtml.category.grid" />
+        </reference>
+    </vassallo_news_adminhtml_category_index>
+    <vassallo_news_adminhtml_category_edit>
+        <reference name="left">
+            <block type="vassallo_news/adminhtml_category_edit_tabs" name="vassallo_news/adminhtml.category.edit.tabs" />
+        </reference>
+        <reference name="content">
+            <block type="vassallo_news/adminhtml_category_edit" name="vassallo_news.adminhtml.category.edit" />
+        </reference>
+    </vassallo_news_adminhtml_category_edit>
+</layout>

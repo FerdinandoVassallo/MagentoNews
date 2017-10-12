@@ -16,9 +16,9 @@ class Vassallo_News_Adminhtml_StoryController extends Mage_Adminhtml_Controller_
     /**
      * indexAction
      */
-    public function indexAction
+    public function indexAction()
     {
-        echo "eccomi";
+        echo "eccomi"; die;
     }
 
     /**
@@ -26,5 +26,9 @@ class Vassallo_News_Adminhtml_StoryController extends Mage_Adminhtml_Controller_
      * @return bool
      */
 
-    protecterd function
+    protected function _isAllowed()
+    {
+        return Mage::getSingleton('admin/session')->isAllowed('vassallo_news');
+    }
+
 }

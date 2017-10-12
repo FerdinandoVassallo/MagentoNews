@@ -11,7 +11,7 @@
  * @version 0.2.0
  * @package Cms
  */
-class Vassallo_News_Model_Category extends Mage_Core_Model_Resource_Db_Abstract
+class Vassallo_News_Model_Resource_Category extends Mage_Core_Model_Resource_Db_Abstract
 {
     public function _construct()
     {

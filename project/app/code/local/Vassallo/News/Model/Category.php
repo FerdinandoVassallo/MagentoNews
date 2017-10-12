@@ -22,13 +22,24 @@
  */
 class Vassallo_News_Model_Category extends Mage_Core_Model_Abstract
 {
+
     /**
-     * _construct
+     * $_eventPrefix
+     * @var string
      */
 
     protected $_eventPrefix = 'vassallo_news_category';
 
+    /**
+     * $_eventObject
+     * @var string
+     */
+
     protected $_eventObject = 'category';
+
+    /**
+     * _construct
+     */
 
     protected function _construct()
     {
@@ -42,7 +53,7 @@ class Vassallo_News_Model_Category extends Mage_Core_Model_Abstract
     protected function _beforeSave()
     {
         parent::_beforeSave();
-        $this->getUpdateAt(Mage::getSingleton('core/date')->gmtDate());
+        $this->getUpdatedAt(Mage::getSingleton('core/date')->gmtDate());
         return $this;
     }
 }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<layout>
+    <vassallo_news_list_index>
+        <reference name="content">
+            <block type="core/template" name="vassallo_news.list" template="vassallo_news/list.phtml" />
+        </reference>
+    </vassallo_news_list_index>
+</layout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config>
-    <munu>
+    <menu>
         <cms>
             <children>
                 <vassallo_news>
@@ -10,18 +10,18 @@
                         <vassallo_news_category>
                             <title>Categories</title>
                             <sort_order>10</sort_order>
-                            <action>vassallo_news/admin_category</action>
+                            <action>vassallo_news/adminhtml_category</action>
                         </vassallo_news_category>
                         <vassallo_news_story>
                             <title>Stories</title>
-                            <sort_order>10</sort_order>
-                            <action>vassallo_news/admin_story</action>
+                            <sort_order>20</sort_order>
+                            <action>vassallo_news/adminhtml_story</action>
                         </vassallo_news_story>
                     </children>
                 </vassallo_news>
             </children>
         </cms>
-    </munu>
+    </menu>
     <acl>
         <resources>
             <all>
@@ -29,12 +29,24 @@
             </all>
             <admin>
                 <children>
-                    <system>
+                    <cms>
                         <children>
                             <vassallo_news translate="title">
-                                <title>Vassallo_News</title>
-                                <sort_order>100</sort_order>
+                                <title>Vassallo News</title>
+                                <sort_order>90</sort_order>
                             </vassallo_news>
+                        </children>
+                    </cms>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                     <vassallo_news translate="title">
+                                         <title>Vassallo_News</title>
+                                         <sort_order>100</sort_order>
+                                     </vassallo_news>
+                                </children>
+                            </config>
                         </children>
                     </system>
                 </children>
